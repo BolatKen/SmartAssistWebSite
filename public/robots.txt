@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://smartassist.kz
+
+# Sitemaps
+Sitemap: https://smartassist.kz/sitemap.xml
