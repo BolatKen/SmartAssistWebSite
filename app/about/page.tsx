@@ -1,48 +1,55 @@
-"use client"
+"use client";
 
-import { motion } from 'framer-motion'
-import { Brain, Shield, Zap, Users } from 'lucide-react'
+import { motion } from "framer-motion";
+import { Brain, Shield, Zap, Users } from "lucide-react";
 
 const teamMembers = [
   {
-    name: "Sarah Chen",
+    name: "Bolat Ken",
     role: "CEO & Co-founder",
-    image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=300"
+    image:
+      "https://res.cloudinary.com/dul8vhkgz/image/upload/v1745417719/photo_2025-03-02_10-20-42_ivmviz.jpg",
   },
   {
     name: "Michael Roberts",
     role: "CTO",
-    image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300"
+    image:
+      "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300",
   },
   {
-    name: "Emily Johnson",
-    role: "Head of AI",
-    image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=300"
-  }
-]
+    name: "Dimash Makhmut",
+    role: "Head of AI & Co-founder",
+    image:
+      "https://res.cloudinary.com/dul8vhkgz/image/upload/v1745417718/photo_2025-03-04_11-27-02_cmneo1.jpg",
+  },
+];
 
 const values = [
   {
     icon: <Brain className="h-8 w-8 text-[#ffffff]" />,
     title: "Инновации В Первую Очередь",
-    description: "Мы раздвигаем границы ИИ-технологий, чтобы решать реальные бизнес-задачи."
+    description:
+      "Мы раздвигаем границы ИИ-технологий, чтобы решать реальные бизнес-задачи.",
   },
   {
     icon: <Shield className="h-8 w-8 text-[#ffffff]" />,
     title: "Безопасность & Доверие",
-    description: "Корпоративный уровень безопасности и защита конфиденциальности ваших бизнес-данных."
+    description:
+      "Корпоративный уровень безопасности и защита конфиденциальности ваших бизнес-данных.",
   },
   {
     icon: <Zap className="h-8 w-8 text-[#ffffff]" />,
     title: "Молниеносная Скорость",
-    description: "Мгновенные ответы и автоматизация, которые поддерживают движение вашего бизнеса."
+    description:
+      "Мгновенные ответы и автоматизация, которые поддерживают движение вашего бизнеса.",
   },
   {
     icon: <Users className="h-8 w-8 text-[#ffffff]" />,
     title: "Успех Клиентов",
-    description: "Преданная поддержка, которая помогает вам максимально эффективно использовать нашу платформу."
-  }
-]
+    description:
+      "Преданная поддержка, которая помогает вам максимально эффективно использовать нашу платформу.",
+  },
+];
 
 export default function About() {
   return (
@@ -59,7 +66,9 @@ export default function About() {
             Наша миссия
           </h1>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Дать возможность бизнесам использовать интеллектуальную автоматизацию, делая передовые ИИ-технологии доступными для компаний любого размера.
+            Дать возможность бизнесам использовать интеллектуальную
+            автоматизацию, делая передовые ИИ-технологии доступными для компаний
+            любого размера.
           </p>
         </div>
 
@@ -72,13 +81,21 @@ export default function About() {
           className="mb-24"
         >
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-space-grotesk font-bold mb-4">Наша история</h2>
+            <h2 className="text-3xl font-space-grotesk font-bold mb-4">
+              Наша история
+            </h2>
             <div className="max-w-3xl mx-auto text-gray-400 space-y-4">
               <p>
-                Основанный в 2024 году, SmartAssist возник из простого наблюдения: малые и средние компании нуждались в таких же мощных ИИ-инструментах, как и крупные предприятия, но в более доступной форме.
+                Основанный в 2024 году, SmartAssist возник из простого
+                наблюдения: малые и средние компании нуждались в таких же мощных
+                ИИ-инструментах, как и крупные предприятия, но в более доступной
+                форме.
               </p>
               <p>
-                Два студента из общежития начали учёбу и заметили, что малым бизнесам не хватает доступных инструментов для автоматизации. Так появился SmartAssist — решение, которое помогает компаниям автоматизировать процессы и улучшать клиентский сервис.
+                Два студента из общежития начали учёбу и заметили, что малым
+                бизнесам не хватает доступных инструментов для автоматизации.
+                Так появился SmartAssist — решение, которое помогает компаниям
+                автоматизировать процессы и улучшать клиентский сервис.
               </p>
             </div>
           </div>
@@ -92,7 +109,9 @@ export default function About() {
           transition={{ duration: 0.8 }}
           className="mb-24"
         >
-          <h2 className="text-3xl font-space-grotesk font-bold text-center mb-12">Наша Команда</h2>
+          <h2 className="text-3xl font-space-grotesk font-bold text-center mb-12">
+            Наша Команда
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <motion.div
@@ -125,7 +144,9 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl font-space-grotesk font-bold text-center mb-12">Наши Ценности</h2>
+          <h2 className="text-3xl font-space-grotesk font-bold text-center mb-12">
+            Наши Ценности
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <motion.div
@@ -137,7 +158,9 @@ export default function About() {
                 className="bg-[#2b2f38]/30 backdrop-blur-lg rounded-xl p-6 border border-[#2b2f38]"
               >
                 <div className="flex justify-center mb-4">{value.icon}</div>
-                <h3 className="text-xl font-semibold text-center mb-2">{value.title}</h3>
+                <h3 className="text-xl font-semibold text-center mb-2">
+                  {value.title}
+                </h3>
                 <p className="text-gray-400 text-center">{value.description}</p>
               </motion.div>
             ))}
@@ -145,5 +168,5 @@ export default function About() {
         </motion.div>
       </motion.div>
     </div>
-  )
+  );
 }
