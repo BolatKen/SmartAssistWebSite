@@ -17,11 +17,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "SmartAssist - AI Business Automation Assistant",
+    default: "SmartAssist - ИИ Автоматизация для бизнеса",
     template: "%s | SmartAssist",
   },
   description:
-    "Intelligent AI assistant for business automation, designed for small and medium-sized businesses.",
+    "Умный ИИ-Ассистент для автоматизации бизнеса, для малых и средних бизнесов.",
   icons: {
     icon: "/favicon.jpeg",
   },
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://smartassist.ai",
-    title: "SmartAssist - AI Business Automation Assistant",
+    title: "SmartAssist - ИИ Автоматизация для бизнеса",
     description:
-      "Intelligent AI assistant for business automation, designed for small and medium-sized businesses.",
+      "Умный ИИ-Ассистент для автоматизации бизнеса, для малых и средних бизнесов.",
     siteName: "SmartAssist",
   },
   twitter: {
