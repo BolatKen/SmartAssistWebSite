@@ -65,10 +65,10 @@ export default function ContactSection() {
       >
         <div className="text-center mb-16">
           <h1 className="text-4xl sm:text-5xl font-space-grotesk font-bold mb-4">
-            Get in Touch
+            Свяжитесь С Нами
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Have questions about SmartAssist? We're here to help.
+            Есть вопросы о SmartAssist? Мы готовы помочь.
           </p>
         </div>
 
@@ -81,16 +81,16 @@ export default function ContactSection() {
           >
             {submitted ? (
               <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 text-center">
-                <h3 className="text-2xl font-bold mb-2">Thank You!</h3>
+                <h3 className="text-2xl font-bold mb-2">Спасибо!</h3>
                 <p className="text-gray-300">
-                  We've received your message and will get back to you shortly.
+                  Мы получили ваше сообщение и скоро свяжемся с вами.
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <Input
                   name="name"
-                  placeholder="Your Name"
+                  placeholder="Ваше имя"
                   value={formData.name}
                   onChange={handleChange}
                   required
@@ -99,7 +99,7 @@ export default function ContactSection() {
                 <Input
                   name="phone"
                   type="tel"
-                  placeholder="Phone Number"
+                  placeholder="+7 (___) ___-__-__"
                   value={formData.phone}
                   onChange={handleChange}
                   required
@@ -107,7 +107,7 @@ export default function ContactSection() {
                 />
                 <Textarea
                   name="message"
-                  placeholder="Your Message"
+                  placeholder="Сообщение"
                   value={formData.message}
                   onChange={handleChange}
                   required
@@ -119,7 +119,7 @@ export default function ContactSection() {
                   size="lg"
                   className="w-full bg-white text-[#0d0f14] font-semibold hover:bg-white/90 hover:shadow-[0_0_20px_rgba(255,255,255,0.5)] transition-all"
                 >
-                  Send Message
+                  Отправить сообщение
                 </Button>
               </form>
             )}
@@ -133,26 +133,26 @@ export default function ContactSection() {
             className="space-y-8"
           >
             <div className="bg-white/5 rounded-2xl p-8 border border-white/10">
-              <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-bold mb-6">Контактная информация</h3>
               <div className="space-y-4 text-gray-300">
                 <div className="flex items-center gap-4">
                   <Mail className="h-6 w-6 text-white" />
                   <div>
                     <p className="text-white font-medium">Email</p>
                     <a
-                      href="mailto:hello@smartassist.ai"
+                      href="mailto:smartassistgpt@gmail.com"
                       className="hover:text-white"
                     >
-                      hello@smartassist.ai
+                      smartassistgpt@gmail.com
                     </a>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
                   <Phone className="h-6 w-6 text-white" />
                   <div>
-                    <p className="text-white font-medium">Phone</p>
-                    <a href="tel:+77777777777" className="hover:text-white">
-                      +7 (777) 777 77 77
+                    <p className="text-white font-medium">Телефон</p>
+                    <a href="tel:+77066122708" className="hover:text-white">
+                      +7 (706) 612 27 08
                     </a>
                   </div>
                 </div>
@@ -160,7 +160,7 @@ export default function ContactSection() {
             </div>
 
             <div className="bg-white/5 rounded-2xl p-8 border border-white/10">
-              <h3 className="text-2xl font-bold mb-6">Follow Us</h3>
+              <h3 className="text-2xl font-bold mb-6">Подписывайтесь на нас</h3>
               <div className="flex space-x-6 text-white">
                 <a
                   href="https://instagram.com/smartassist.ai"

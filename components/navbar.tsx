@@ -34,9 +34,9 @@ export function Navbar() {
 
   const navItems = [
     { href: "/pricing", label: "Pricing" },
-    { href: "/about", label: "About" },
-    { href: "/blog", label: "Blog" },
-    { href: "/contact", label: "Contact" },
+    { href: "/about", label: "О нас" },
+    { href: "/blog", label: "Блог" },
+    { href: "/contact", label: "Контакты" },
   ];
 
   return (
@@ -74,7 +74,7 @@ export function Navbar() {
                 className="bg-white hover:bg-white/80 text-[#0d0f14]"
                 onClick={() => setShowModal(true)}
               >
-                Get Started
+                Начать 
               </Button>
             </div>
 
@@ -129,7 +129,7 @@ export function Navbar() {
                     setShowModal(true);
                   }}
                 >
-                  Get Started
+                  Начать
                 </Button>
               </motion.div>
             </motion.div>

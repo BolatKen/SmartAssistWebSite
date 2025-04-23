@@ -12,21 +12,21 @@ export function Footer() {
               <span className="font-space-grotesk text-xl font-bold">SmartAssist</span>
             </Link>
             <p className="text-sm text-gray-400">
-              Intelligent AI assistant for business automation, designed for small and medium-sized businesses.
+            Интеллектуальный ИИ-ассистент для автоматизации бизнеса, созданный для малых и средних предприятий.
             </p>
             <div className="space-y-2">
               <p className="text-sm text-gray-400">
-                <span className="font-semibold text-white">Phone:</span> +7 (777) 777 77 77
+                <span className="font-semibold text-white">Телефон:</span> +7 (706) 612 27 08
               </p>
               <p className="text-sm text-gray-400">
-                <span className="font-semibold text-white">Email:</span> hello@smartassist.ai
+                <span className="font-semibold text-white">Email:</span> smartassistgpt@gmail.com
               </p>
             </div>
             <div className="flex space-x-4">
               <Link href="https://instagram.com/smartassist.ai" className="text-gray-400 hover:text-[#ffffff] transition-colors">
                 <Instagram className="h-5 w-5" />
               </Link>
-              <Link href="https://t.me/smartassist" className="text-gray-400 hover:text-[#ffffff] transition-colors">
+              <Link href="https://t.me/smartassistai" className="text-gray-400 hover:text-[#ffffff] transition-colors">
                 <MessageCircle className="h-5 w-5" />
               </Link>
               <Link href="https://linkedin.com/company/smartassist" className="text-gray-400 hover:text-[#ffffff] transition-colors">
@@ -36,7 +36,7 @@ export function Footer() {
           </div>
           
           <div>
-            <h3 className="font-semibold mb-4">Product</h3>
+            <h3 className="font-semibold mb-4">Продукт</h3>
             <ul className="space-y-2">
               <li>
                 <Link 
@@ -44,7 +44,7 @@ export function Footer() {
                   className="text-gray-400 hover:text-[#ffffff] transition-colors relative group"
                 >
                   <span className="relative">
-                    Features
+                    Особенности
                     <span className="absolute inset-x-0 bottom-0 h-px bg-[#ffffff]/50 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
                   </span>
                 </Link>
@@ -66,7 +66,7 @@ export function Footer() {
                   className="text-gray-400 hover:text-[#ffffff] transition-colors relative group"
                 >
                   <span className="relative">
-                    About
+                    О нас
                     <span className="absolute inset-x-0 bottom-0 h-px bg-[#ffffff]/50 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
                   </span>
                 </Link>
@@ -75,7 +75,7 @@ export function Footer() {
           </div>
           
           <div>
-            <h3 className="font-semibold mb-4">Resources</h3>
+            <h3 className="font-semibold mb-4">Ресурсы</h3>
             <ul className="space-y-2">
               <li>
                 <Link 
@@ -83,7 +83,7 @@ export function Footer() {
                   className="text-gray-400 hover:text-[#ffffff] transition-colors relative group"
                 >
                   <span className="relative">
-                    Blog
+                    Блог
                     <span className="absolute inset-x-0 bottom-0 h-px bg-[#ffffff]/50 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
                   </span>
                 </Link>
@@ -94,7 +94,7 @@ export function Footer() {
                   className="text-gray-400 hover:text-[#ffffff] transition-colors relative group"
                 >
                   <span className="relative">
-                    Documentation
+                    Документация
                     <span className="absolute inset-x-0 bottom-0 h-px bg-[#ffffff]/50 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
                   </span>
                 </Link>
@@ -105,7 +105,7 @@ export function Footer() {
                   className="text-gray-400 hover:text-[#ffffff] transition-colors relative group"
                 >
                   <span className="relative">
-                    Support
+                    Поддержка
                     <span className="absolute inset-x-0 bottom-0 h-px bg-[#ffffff]/50 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
                   </span>
                 </Link>
@@ -114,7 +114,7 @@ export function Footer() {
           </div>
           
           <div>
-            <h3 className="font-semibold mb-4">Legal</h3>
+            <h3 className="font-semibold mb-4">Юридическая информация</h3>
             <ul className="space-y-2">
               <li>
                 <Link 
@@ -122,7 +122,7 @@ export function Footer() {
                   className="text-gray-400 hover:text-[#ffffff] transition-colors relative group"
                 >
                   <span className="relative">
-                    Privacy Policy
+                    Политика конфиденциальности
                     <span className="absolute inset-x-0 bottom-0 h-px bg-[#ffffff]/50 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
                   </span>
                 </Link>
@@ -133,7 +133,7 @@ export function Footer() {
                   className="text-gray-400 hover:text-[#ffffff] transition-colors relative group"
                 >
                   <span className="relative">
-                    Terms of Service
+                    Условия обслуживания
                     <span className="absolute inset-x-0 bottom-0 h-px bg-[#ffffff]/50 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
                   </span>
                 </Link>

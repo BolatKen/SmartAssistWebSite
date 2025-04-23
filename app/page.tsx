@@ -68,7 +68,7 @@ export default function Home() {
               className="text-5xl sm:text-6xl lg:text-7xl font-space-grotesk font-bold mb-6"
             >
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-[#ffffff]">
-                Your AI Assistant for Sales, Support, and CRM Automation
+               Ваш ИИ-ассистент для продаж, поддержки и автоматизации CRM.
               </span>
             </motion.h1>
 
@@ -78,8 +78,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto"
             >
-              SmartAssist helps you automate client interactions, process
-              requests instantly, and grow your business 24/7.
+              SmartAssist помогает автоматизировать взаимодействие с клиентами, обрабатывать запросы мгновенно и развивать ваш бизнес 24/7.
             </motion.p>
 
             <motion.div
@@ -93,7 +92,7 @@ export default function Home() {
                 className="bg-[#ffffff] hover:bg-[#ffffff]/80 text-lg px-8 h-14 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-all duration-300"
                 onClick={scrollToForm}
               >
-                Try Free Demo
+                Попробовать Демо Бесплатно
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button
@@ -102,7 +101,7 @@ export default function Home() {
                 onClick={scrollToFeatures}
                 className="border-[#2b2f38] hover:border-[#ffffff] text-lg px-8 h-14 transition-all duration-300"
               >
-                See How It Works
+                Узнать, Как Работает
               </Button>
             </motion.div>
           </motion.div>
@@ -124,11 +123,10 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl sm:text-4xl font-space-grotesk font-bold mb-4">
-              Powerful Features for Modern Businesses
+            Продвинутые возможности для вашего бизнеса
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Everything you need to automate your business processes and
-              enhance customer interactions.
+            Всё, что нужно для автоматизации бизнес-процессов и улучшения взаимодействия с клиентами.
             </p>
           </motion.div>
 
@@ -136,27 +134,27 @@ export default function Home() {
             {[
               {
                 icon: <Bot className="h-8 w-8 text-[#ffffff]" />,
-                title: "AI-Powered Support",
+                title: "Поддержка на базе ИИ",
                 description:
-                  "24/7 intelligent customer support that learns and improves over time.",
+                  "Интеллектуальная поддержка 24/7, которая учится и становится лучше со временем.",
               },
               {
                 icon: <Zap className="h-8 w-8 text-[#ffffff]" />,
-                title: "Process Automation",
+                title: "Автоматизация процессов",
                 description:
-                  "Streamline repetitive tasks and workflows with smart automation.",
+                  "Оптимизируйте рутинные задачи и процессы с помощью умной автоматизации.",
               },
               {
                 icon: <ChartBar className="h-8 w-8 text-[#ffffff]" />,
-                title: "Analytics & Insights",
+                title: "Аналитика и инсайты",
                 description:
-                  "Data-driven insights to make informed business decisions.",
+                  "Аналитика на основе данных для обоснованных бизнес-решений.",
               },
               {
                 icon: <Users className="h-8 w-8 text-[#ffffff]" />,
-                title: "Team Collaboration",
+                title: "Совместная работа команды",
                 description:
-                  "Enhanced team productivity with integrated collaboration tools.",
+                  "Повышение продуктивности команды с помощью встроенных инструментов для совместной работы.",
               },
             ].map((feature, index) => (
               <motion.div
@@ -187,10 +185,10 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl sm:text-4xl font-space-grotesk font-bold mb-4">
-              How SmartAssist Works
+              Как работает SmartAssist
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Get started with SmartAssist in three simple steps
+              Начните с SmartAssist всего за три простых шага
             </p>
           </motion.div>
 
@@ -198,21 +196,21 @@ export default function Home() {
             {[
               {
                 icon: <Rocket className="h-12 w-12 text-[#ffffff]" />,
-                title: "Quick Setup",
+                title: "Быстрая настройка",
                 description:
-                  "Connect SmartAssist to your existing tools and systems in minutes.",
+                  "Подключите SmartAssist к вашим текущим инструментам и системам за считанные минуты.",
               },
               {
                 icon: <Shield className="h-12 w-12 text-[#ffffff]" />,
-                title: "Secure Integration",
+                title: "Безопасная интеграция",
                 description:
-                  "Your data is encrypted and protected with enterprise-grade security.",
+                  "Ваши данные зашифрованы и защищены на уровне корпоративной безопасности.",
               },
               {
                 icon: <Target className="h-12 w-12 text-[#ffffff]" />,
-                title: "Start Automating",
+                title: "Начните автоматизацию",
                 description:
-                  "Watch as SmartAssist streamlines your business processes automatically.",
+                  "Смотрите, как SmartAssist автоматически оптимизирует ваши бизнес-процессы.",
               },
             ].map((step, index) => (
               <motion.div
@@ -246,10 +244,10 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl sm:text-4xl font-space-grotesk font-bold mb-4">
-              Why Choose SmartAssist
+              Почему выбирают SmartAssist
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Industry-leading performance and reliability
+              Лидерская производительность и надёжность в отрасли
             </p>
           </motion.div>
 
@@ -258,21 +256,21 @@ export default function Home() {
               {
                 icon: <MessageSquare className="h-8 w-8 text-[#ffffff]" />,
                 metric: "1s",
-                title: "Response Time",
+                title: "Время Ответа",
                 description:
-                  "Lightning-fast automated responses to customer inquiries",
+                  "Молниеносные автоматические ответы на запросы клиентов",
               },
               {
                 icon: <BarChart3 className="h-8 w-8 text-[#ffffff]" />,
                 metric: "80%",
-                title: "Automation Rate",
-                description: "Of routine tasks automated, saving valuable time",
+                title: "Уровень Автоматизации",
+                description: "Рутинные задачи автоматизируются, экономя ваше драгоценное время",
               },
               {
                 icon: <Clock className="h-8 w-8 text-[#ffffff]" />,
                 metric: "24/7",
-                title: "Availability",
-                description: "Round-the-clock customer support and automation",
+                title: "Доступность",
+                description: "Круглосуточная поддержка клиентов и автоматизация",
               },
             ].map((benefit, index) => (
               <motion.div
@@ -306,10 +304,10 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl sm:text-4xl font-space-grotesk font-bold mb-4">
-              Trusted by Industry Leaders
+              Нам доверяют лидеры отрасли
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              See what our customers have to say about SmartAssist
+              Узнайте, что говорят наши клиенты о SmartAssist
             </p>
           </motion.div>
 
@@ -375,11 +373,10 @@ export default function Home() {
             className="text-center"
           >
             <h2 className="text-3xl sm:text-4xl font-space-grotesk font-bold mb-4">
-              Ready to Transform Your Business?
+              Готовы Преобразить Свой Бизнес?
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto mb-8">
-              Join thousands of businesses already using SmartAssist to automate
-              their operations and delight their customers.
+              Присоединяйтесь к тысячам компаний, которые уже используют SmartAssist для автоматизации процессов и повышения удовлетворённости клиентов.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button
@@ -387,11 +384,11 @@ export default function Home() {
                 className="bg-[#ffffff] hover:bg-[#ffffff]/80"
                 onClick={scrollToForm}
               >
-                Get Started Now
+                Начать Сейчас
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button size="lg" variant="outline" className="border-[#2b2f38]">
-                Schedule Demo
+                Запланировать Демонстрацию
               </Button>
             </div>
           </motion.div>

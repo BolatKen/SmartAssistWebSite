@@ -24,23 +24,23 @@ const teamMembers = [
 const values = [
   {
     icon: <Brain className="h-8 w-8 text-[#ffffff]" />,
-    title: "Innovation First",
-    description: "Pushing the boundaries of AI technology to solve real business challenges."
+    title: "Инновации В Первую Очередь",
+    description: "Мы раздвигаем границы ИИ-технологий, чтобы решать реальные бизнес-задачи."
   },
   {
     icon: <Shield className="h-8 w-8 text-[#ffffff]" />,
-    title: "Security & Trust",
-    description: "Enterprise-grade security and privacy protection for your business data."
+    title: "Безопасность & Доверие",
+    description: "Корпоративный уровень безопасности и защита конфиденциальности ваших бизнес-данных."
   },
   {
     icon: <Zap className="h-8 w-8 text-[#ffffff]" />,
-    title: "Lightning Fast",
-    description: "Instant responses and automation that keeps your business moving."
+    title: "Молниеносная Скорость",
+    description: "Мгновенные ответы и автоматизация, которые поддерживают движение вашего бизнеса."
   },
   {
     icon: <Users className="h-8 w-8 text-[#ffffff]" />,
-    title: "Customer Success",
-    description: "Dedicated support ensuring you get the most from our platform."
+    title: "Успех Клиентов",
+    description: "Преданная поддержка, которая помогает вам максимально эффективно использовать нашу платформу."
   }
 ]
 
@@ -56,10 +56,10 @@ export default function About() {
         {/* Mission Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl sm:text-5xl font-space-grotesk font-bold mb-4">
-            Our Mission
+            Наша миссия
           </h1>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            To empower businesses with intelligent automation, making world-class AI technology accessible to companies of all sizes.
+            Дать возможность бизнесам использовать интеллектуальную автоматизацию, делая передовые ИИ-технологии доступными для компаний любого размера.
           </p>
         </div>
 
@@ -72,13 +72,13 @@ export default function About() {
           className="mb-24"
         >
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-space-grotesk font-bold mb-4">Our Story</h2>
+            <h2 className="text-3xl font-space-grotesk font-bold mb-4">Наша история</h2>
             <div className="max-w-3xl mx-auto text-gray-400 space-y-4">
               <p>
-                Founded in 2023, SmartAssist emerged from a simple observation: small and medium-sized businesses needed the same powerful AI tools as large enterprises, but in a more accessible package.
+                Основанный в 2024 году, SmartAssist возник из простого наблюдения: малые и средние компании нуждались в таких же мощных ИИ-инструментах, как и крупные предприятия, но в более доступной форме.
               </p>
               <p>
-                What started as a simple automation tool has grown into a comprehensive platform used by thousands of businesses worldwide, helping them automate their operations and deliver exceptional customer experiences.
+                Два студента из общежития начали учёбу и заметили, что малым бизнесам не хватает доступных инструментов для автоматизации. Так появился SmartAssist — решение, которое помогает компаниям автоматизировать процессы и улучшать клиентский сервис.
               </p>
             </div>
           </div>
@@ -92,7 +92,7 @@ export default function About() {
           transition={{ duration: 0.8 }}
           className="mb-24"
         >
-          <h2 className="text-3xl font-space-grotesk font-bold text-center mb-12">Our Team</h2>
+          <h2 className="text-3xl font-space-grotesk font-bold text-center mb-12">Наша Команда</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <motion.div
@@ -125,7 +125,7 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl font-space-grotesk font-bold text-center mb-12">Our Values</h2>
+          <h2 className="text-3xl font-space-grotesk font-bold text-center mb-12">Наши Ценности</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <motion.div

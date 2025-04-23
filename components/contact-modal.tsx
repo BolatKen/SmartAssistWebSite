@@ -49,7 +49,7 @@ export default function ContactModal({
             >
               <X className="w-6 h-6" />
             </button>
-            <h2 className="text-2xl font-bold mb-6 text-center">Get Started</h2>
+            <h2 className="text-2xl font-bold mb-6 text-center">Начать</h2>
             <ContactForm />
           </motion.div>
         </motion.div>
