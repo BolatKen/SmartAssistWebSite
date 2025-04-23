@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://smartassist.kz
+Host: https://your-domain.com
 
 # Sitemaps
-Sitemap: https://smartassist.kz/sitemap.xml
+Sitemap: https://your-domain.com/sitemap.xml
