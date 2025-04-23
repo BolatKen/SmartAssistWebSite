@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import { Brain, Instagram, MessageCircle, Linkedin } from 'lucide-react'
+import Link from "next/link";
+import { Brain, Instagram, MessageCircle, Linkedin } from "lucide-react";
 
 export function Footer() {
   return (
@@ -9,7 +9,9 @@ export function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
               <Brain className="w-8 h-8 text-[#ffffff]" />
-              <span className="font-space-grotesk text-xl font-bold">SmartAssist</span>
+              <span className="font-space-grotesk text-xl font-bold">
+                SmartAssist
+              </span>
             </Link>
             <p className="text-sm text-gray-400">
             Интеллектуальный ИИ-ассистент для автоматизации бизнеса, созданный для малых и средних предприятий.
@@ -23,18 +25,24 @@ export function Footer() {
               </p>
             </div>
             <div className="flex space-x-4">
-              <Link href="https://instagram.com/smartassist.ai" className="text-gray-400 hover:text-[#ffffff] transition-colors">
+              <Link
+                href="https://instagram.com/smartassist.ai"
+                className="text-gray-400 hover:text-[#ffffff] transition-colors"
+              >
                 <Instagram className="h-5 w-5" />
               </Link>
               <Link href="https://t.me/smartassistai" className="text-gray-400 hover:text-[#ffffff] transition-colors">
                 <MessageCircle className="h-5 w-5" />
               </Link>
-              <Link href="https://linkedin.com/company/smartassist" className="text-gray-400 hover:text-[#ffffff] transition-colors">
+              <Link
+                href="https://linkedin.com/company/smartassist"
+                className="text-gray-400 hover:text-[#ffffff] transition-colors"
+              >
                 <Linkedin className="h-5 w-5" />
               </Link>
             </div>
           </div>
-          
+
           <div>
             <h3 className="font-semibold mb-4">Продукт</h3>
             <ul className="space-y-2">
@@ -50,8 +58,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="/pricing" 
+                <Link
+                  href="/pricing"
                   className="text-gray-400 hover:text-[#ffffff] transition-colors relative group"
                 >
                   <span className="relative">
@@ -61,8 +69,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="/about" 
+                <Link
+                  href="/about"
                   className="text-gray-400 hover:text-[#ffffff] transition-colors relative group"
                 >
                   <span className="relative">
@@ -73,13 +81,13 @@ export function Footer() {
               </li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="font-semibold mb-4">Ресурсы</h3>
             <ul className="space-y-2">
               <li>
-                <Link 
-                  href="/blog" 
+                <Link
+                  href="/blog"
                   className="text-gray-400 hover:text-[#ffffff] transition-colors relative group"
                 >
                   <span className="relative">
@@ -89,8 +97,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="/docs" 
+                <Link
+                  href="/docs"
                   className="text-gray-400 hover:text-[#ffffff] transition-colors relative group"
                 >
                   <span className="relative">
@@ -100,8 +108,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="/support" 
+                <Link
+                  href="/support"
                   className="text-gray-400 hover:text-[#ffffff] transition-colors relative group"
                 >
                   <span className="relative">
@@ -112,13 +120,13 @@ export function Footer() {
               </li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="font-semibold mb-4">Юридическая информация</h3>
             <ul className="space-y-2">
               <li>
-                <Link 
-                  href="/privacy" 
+                <Link
+                  href="/privacy"
                   className="text-gray-400 hover:text-[#ffffff] transition-colors relative group"
                 >
                   <span className="relative">
@@ -128,8 +136,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="/terms" 
+                <Link
+                  href="/terms"
                   className="text-gray-400 hover:text-[#ffffff] transition-colors relative group"
                 >
                   <span className="relative">
@@ -141,7 +149,7 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        
+
         <div className="mt-8 pt-8 border-t border-[#2b2f38]">
           <p className="text-center text-gray-400 text-sm">
             © 2025 SmartAssist. All rights reserved.
@@ -149,5 +157,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
