@@ -1,40 +1,53 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { Button } from '@/components/ui/button'
-import { Brain, Menu, X } from 'lucide-react'
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Brain, Menu, X } from "lucide-react";
 
 export function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 0);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navItems = [
-    { href: '/features', label: 'Features' },
-    { href: '/pricing', label: 'Pricing' },
-    { href: '/about', label: 'About' },
-    { href: '/blog', label: 'Blog' },
-    { href: '/contact', label: 'Contact' },
-  ]
+    // { href: '/features', label: 'Features' },
+    { href: "/pricing", label: "Pricing" },
+    { href: "/about", label: "About" },
+    { href: "/blog", label: "Blog" },
+    { href: "/contact", label: "Contact" },
+  ];
+
+  const scrollToForm = () => {
+    const formSection = document.querySelector("#contact");
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-[#0d0f14]/80 backdrop-blur-lg border-b border-[#2b2f38]' : ''
-    }`}>
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-[#0d0f14]/80 backdrop-blur-lg border-b border-[#2b2f38]"
+          : ""
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center space-x-2">
             <Brain className="w-8 h-8 text-[#ffffff]" />
-            <span className="font-space-grotesk text-xl font-bold">SmartAssist</span>
+            <span className="font-space-grotesk text-xl font-bold">
+              SmartAssist
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -48,7 +61,10 @@ export function Navbar() {
                 {item.label}
               </Link>
             ))}
-            <Button className="bg-[#ffffff] hover:bg-[#ffffff]/80">
+            <Button
+              className="bg-[#ffffff] hover:bg-[#ffffff]/80"
+              onClick={scrollToForm}
+            >
               Get Started
             </Button>
           </div>
@@ -59,7 +75,11 @@ export function Navbar() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-[#f0f0f0]"
             >
-              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMobileMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -91,5 +111,5 @@ export function Navbar() {
         )}
       </div>
     </nav>
-  )
+  );
 }

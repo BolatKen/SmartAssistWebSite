@@ -1,14 +1,36 @@
-"use client"
+"use client";
 
-import { motion } from 'framer-motion'
-import { Button } from '@/components/ui/button'
-import { Brain, ArrowRight, Bot, Zap, ChartBar, Users, MessageSquare, BarChart3, Clock, CheckCircle2, Rocket, Shield, Target } from 'lucide-react'
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import {
+  Brain,
+  ArrowRight,
+  Bot,
+  Zap,
+  ChartBar,
+  Users,
+  MessageSquare,
+  BarChart3,
+  Clock,
+  CheckCircle2,
+  Rocket,
+  Shield,
+  Target,
+} from "lucide-react";
+import ContactForm from "@/components/contact-form";
 
 export default function Home() {
   const scrollToFeatures = () => {
-    const featuresSection = document.querySelector('#features')
-    featuresSection?.scrollIntoView({ behavior: 'smooth' })
-  }
+    const featuresSection = document.querySelector("#features");
+    featuresSection?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToForm = () => {
+    const formSection = document.querySelector("#contact");
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <>
@@ -56,7 +78,8 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto"
             >
-              SmartAssist helps you automate client interactions, process requests instantly, and grow your business 24/7.
+              SmartAssist helps you automate client interactions, process
+              requests instantly, and grow your business 24/7.
             </motion.p>
 
             <motion.div
@@ -68,6 +91,7 @@ export default function Home() {
               <Button
                 size="lg"
                 className="bg-[#ffffff] hover:bg-[#ffffff]/80 text-lg px-8 h-14 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-all duration-300"
+                onClick={scrollToForm}
               >
                 Try Free Demo
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -85,6 +109,10 @@ export default function Home() {
         </div>
       </section>
 
+      <div id="contact">
+        <ContactForm />
+      </div>
+
       {/* Features Section */}
       <section id="features" className="py-24 bg-[#0d0f14]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -99,7 +127,8 @@ export default function Home() {
               Powerful Features for Modern Businesses
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Everything you need to automate your business processes and enhance customer interactions.
+              Everything you need to automate your business processes and
+              enhance customer interactions.
             </p>
           </motion.div>
 
@@ -108,23 +137,27 @@ export default function Home() {
               {
                 icon: <Bot className="h-8 w-8 text-[#ffffff]" />,
                 title: "AI-Powered Support",
-                description: "24/7 intelligent customer support that learns and improves over time."
+                description:
+                  "24/7 intelligent customer support that learns and improves over time.",
               },
               {
                 icon: <Zap className="h-8 w-8 text-[#ffffff]" />,
                 title: "Process Automation",
-                description: "Streamline repetitive tasks and workflows with smart automation."
+                description:
+                  "Streamline repetitive tasks and workflows with smart automation.",
               },
               {
                 icon: <ChartBar className="h-8 w-8 text-[#ffffff]" />,
                 title: "Analytics & Insights",
-                description: "Data-driven insights to make informed business decisions."
+                description:
+                  "Data-driven insights to make informed business decisions.",
               },
               {
                 icon: <Users className="h-8 w-8 text-[#ffffff]" />,
                 title: "Team Collaboration",
-                description: "Enhanced team productivity with integrated collaboration tools."
-              }
+                description:
+                  "Enhanced team productivity with integrated collaboration tools.",
+              },
             ].map((feature, index) => (
               <motion.div
                 key={index}
@@ -166,18 +199,21 @@ export default function Home() {
               {
                 icon: <Rocket className="h-12 w-12 text-[#ffffff]" />,
                 title: "Quick Setup",
-                description: "Connect SmartAssist to your existing tools and systems in minutes."
+                description:
+                  "Connect SmartAssist to your existing tools and systems in minutes.",
               },
               {
                 icon: <Shield className="h-12 w-12 text-[#ffffff]" />,
                 title: "Secure Integration",
-                description: "Your data is encrypted and protected with enterprise-grade security."
+                description:
+                  "Your data is encrypted and protected with enterprise-grade security.",
               },
               {
                 icon: <Target className="h-12 w-12 text-[#ffffff]" />,
                 title: "Start Automating",
-                description: "Watch as SmartAssist streamlines your business processes automatically."
-              }
+                description:
+                  "Watch as SmartAssist streamlines your business processes automatically.",
+              },
             ].map((step, index) => (
               <motion.div
                 key={index}
@@ -223,20 +259,21 @@ export default function Home() {
                 icon: <MessageSquare className="h-8 w-8 text-[#ffffff]" />,
                 metric: "1s",
                 title: "Response Time",
-                description: "Lightning-fast automated responses to customer inquiries"
+                description:
+                  "Lightning-fast automated responses to customer inquiries",
               },
               {
                 icon: <BarChart3 className="h-8 w-8 text-[#ffffff]" />,
                 metric: "80%",
                 title: "Automation Rate",
-                description: "Of routine tasks automated, saving valuable time"
+                description: "Of routine tasks automated, saving valuable time",
               },
               {
                 icon: <Clock className="h-8 w-8 text-[#ffffff]" />,
                 metric: "24/7",
                 title: "Availability",
-                description: "Round-the-clock customer support and automation"
-              }
+                description: "Round-the-clock customer support and automation",
+              },
             ].map((benefit, index) => (
               <motion.div
                 key={index}
@@ -247,7 +284,9 @@ export default function Home() {
                 className="text-center p-8 bg-[#2b2f38]/30 rounded-xl border border-[#2b2f38]"
               >
                 <div className="flex justify-center mb-4">{benefit.icon}</div>
-                <div className="text-4xl font-bold text-[#ffffff] mb-2">{benefit.metric}</div>
+                <div className="text-4xl font-bold text-[#ffffff] mb-2">
+                  {benefit.metric}
+                </div>
                 <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
                 <p className="text-gray-400">{benefit.description}</p>
               </motion.div>
@@ -277,23 +316,26 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                quote: "SmartAssist has transformed how we handle customer support. Response times are down 80% and customer satisfaction is up.",
+                quote:
+                  "SmartAssist has transformed how we handle customer support. Response times are down 80% and customer satisfaction is up.",
                 author: "Sarah Johnson",
                 role: "Customer Success Manager",
-                company: "TechCorp"
+                company: "TechCorp",
               },
               {
-                quote: "The automation capabilities are incredible. We've saved countless hours on routine tasks and can focus on strategic initiatives.",
+                quote:
+                  "The automation capabilities are incredible. We've saved countless hours on routine tasks and can focus on strategic initiatives.",
                 author: "Michael Chen",
                 role: "Operations Director",
-                company: "InnovateX"
+                company: "InnovateX",
               },
               {
-                quote: "Implementation was seamless and the results were immediate. Our team loves how intuitive the platform is.",
+                quote:
+                  "Implementation was seamless and the results were immediate. Our team loves how intuitive the platform is.",
                 author: "Emily Rodriguez",
                 role: "Head of Support",
-                company: "GrowthLabs"
-              }
+                company: "GrowthLabs",
+              },
             ].map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -306,11 +348,15 @@ export default function Home() {
                 <div className="mb-4">
                   <CheckCircle2 className="h-8 w-8 text-[#ffffff]" />
                 </div>
-                <p className="text-gray-300 mb-6 italic">"{testimonial.quote}"</p>
+                <p className="text-gray-300 mb-6 italic">
+                  "{testimonial.quote}"
+                </p>
                 <div>
                   <p className="font-semibold">{testimonial.author}</p>
                   <p className="text-sm text-gray-400">{testimonial.role}</p>
-                  <p className="text-sm text-[#ffffff]">{testimonial.company}</p>
+                  <p className="text-sm text-[#ffffff]">
+                    {testimonial.company}
+                  </p>
                 </div>
               </motion.div>
             ))}
@@ -332,10 +378,15 @@ export default function Home() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto mb-8">
-              Join thousands of businesses already using SmartAssist to automate their operations and delight their customers.
+              Join thousands of businesses already using SmartAssist to automate
+              their operations and delight their customers.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" className="bg-[#ffffff] hover:bg-[#ffffff]/80">
+              <Button
+                size="lg"
+                className="bg-[#ffffff] hover:bg-[#ffffff]/80"
+                onClick={scrollToForm}
+              >
                 Get Started Now
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -347,5 +398,5 @@ export default function Home() {
         </div>
       </section>
     </>
-  )
+  );
 }
