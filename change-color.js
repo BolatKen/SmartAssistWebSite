@@ -2,96 +2,93 @@ const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
 
-// 🎨 Доступные цвета на выбор
-const toColorList = ['#00ff9d', '#a855f7', '#facc15', '#ffffff', '#3b82f6'];
+// 🎨 Цветовые темы
+const toColor = {
+  "green": ['#00ff9d', '#00ff9d]/10', '#00ff9d]/20', '#00ff9d]/5', '#00ff9d]/80', 'rgba(0,255,157,0.3)', 'rgba(0,255,157,0.5)'],
+  "blue": ['#4f9eff', '#4f9eff]/10', '#4f9eff]/20', '#4f9eff]/5', '#4f9eff]/80', 'rgba(79,158,255,0.3)', 'rgba(79,158,255,0.5)'],
+  "purple": ['#a855f7', '#a855f7]/10', '#a855f7]/20', '#a855f7]/5', '#a855f7]/80', 'rgba(168,85,247,0.3)', 'rgba(168,85,247,0.5)'],
+  "yellow": ['#facc15', '#facc15]/10', '#facc15]/20', '#facc15]/5', '#facc15]/80', 'rgba(250,204,21,0.3)', 'rgba(250,204,21,0.5)'],
+  "white": ['#ffffff', '#ffffff]/10', '#ffffff]/20', '#ffffff]/5', '#ffffff]/80', 'rgba(255,255,255,0.3)', 'rgba(255,255,255,0.5)']
+};
 
-// 📦 Целевые файлы
-const files = [
-  './components/navbar.tsx',
-  './components/footer.tsx'
-];
+const themeKeys = Object.keys(toColor);
+const extensions = ['.tsx', '.ts', '.js', '.jsx', '.css', '.scss'];
+const directories = ['./app', './components'];
 
-// 🔍 Ищем все классы вида [#hex] включая модификаторы (например /80)
-const colorPattern = /(?<full>(?<!bg)(?<prefix>\w*[-:]?)\[#(?:[0-9a-fA-F]{3,8})\](\/\d{1,3})?)/g;
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 
-// 🧠 Выбор цвета
-function askColorChoice() {
-  console.log('🎨 Выбери цвет для замены:\n');
-  toColorList.forEach((color, index) => {
-    console.log(`  ${index + 1}. ${color}`);
-  });
+console.log('🎨 Доступные темы:');
+themeKeys.forEach((key, index) => {
+  console.log(`  ${index + 1}. ${key}`);
+});
 
-  const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-  });
+rl.question('\nВыбери ТЕКУЩУЮ тему (номер): ', (fromIndex) => {
+  rl.question('Выбери НОВУЮ тему (номер): ', (toIndex) => {
+    const fromColorKey = themeKeys[parseInt(fromIndex) - 1];
+    const toColorKey = themeKeys[parseInt(toIndex) - 1];
 
-  rl.question('\nВведи номер цвета: ', (answer) => {
-    const index = parseInt(answer) - 1;
-    if (!toColorList[index]) {
-      console.log('❌ Неверный выбор.');
+    if (!fromColorKey || !toColorKey) {
+      console.error('❌ Неверный выбор темы');
       rl.close();
       return;
     }
 
-    const selectedColor = toColorList[index];
-    console.log(`\n🚀 Заменяем цвета на: ${selectedColor} (кроме первого в <footer>)\n`);
-    replaceColorsInFiles(selectedColor);
-    rl.close();
-  });
-}
+    const from = toColor[fromColorKey];
+    const to = toColor[toColorKey];
 
-// 🧼 Замена цвета, пропуская 1-е вхождение в <footer>
-function replaceColorsInFiles(toColor) {
-  files.forEach(file => {
-    if (!fs.existsSync(file)) {
-      console.warn(`⚠ Файл не найден: ${file}`);
+    if (!from || !to || from.length !== to.length) {
+      console.error('❌ Темы несовместимы или не найдены.');
+      rl.close();
       return;
     }
 
-    let content = fs.readFileSync(file, 'utf8');
-    const lines = content.split('\n');
-    let inFooter = false;
-    let footerColorSkipped = false;
+    const replacements = from.map((color, i) => ({
+      pattern: new RegExp(color.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'),
+      replacement: to[i]
+    }));
 
-    const modifiedLines = lines.map((line) => {
-        // Вошли в <footer>
-        if (line.includes('<footer')) {
-          inFooter = true;
-          footerColorSkipped = false;
-        }
-      
-        let modifiedLine = line;
-      
-        // Если в теге <footer> и есть цвет
-        if (inFooter) {
-          const matches = [...line.matchAll(/\[#(?:[0-9a-fA-F]{3,8})\](\/\d{1,3})?/g)];
-          if (matches.length > 0) {
-            // Пропускаем ТОЛЬКО первое вхождение, остальные заменяем
-            let replacedCount = 0;
-            modifiedLine = modifiedLine.replace(/\[#(?:[0-9a-fA-F]{3,8})\](\/\d{1,3})?/g, (match) => {
-              if (!footerColorSkipped) {
-                footerColorSkipped = true;
-                return match; // оставить первый
-              } else {
-                return `[${toColor}]`; // заменить последующие
-              }
-            });
-          }
-          return modifiedLine;
-        }
-      
-        // Все остальные строки — обычная замена
-        return modifiedLine.replace(colorPattern, (_, full, prefix, suffix) => {
-          return `${prefix}[${toColor}]${suffix || ''}`;
-        });
-      });
-      
+    console.log(`\n🔁 Заменяем тему "${fromColorKey}" на "${toColorKey}"...\n`);
 
-    fs.writeFileSync(file, modifiedLines.join('\n'), 'utf8');
-    console.log(`✔ Цвета обновлены в ${file}`);
+    directories.forEach(dir => walkDir(dir, replacements));
+    rl.close();
   });
+});
+
+// 🔧 Замена в файле
+function replaceInFile(filePath, replacements) {
+  if (!fs.existsSync(filePath)) return;
+
+  let content = fs.readFileSync(filePath, 'utf8');
+  let modified = false;
+
+  replacements.forEach(({ pattern, replacement }) => {
+    if (pattern.test(content)) {
+      content = content.replace(pattern, replacement);
+      modified = true;
+    }
+  });
+
+  if (modified) {
+    fs.writeFileSync(filePath, content, 'utf8');
+    console.log(`✔ Обновлено: ${filePath}`);
+  }
 }
 
-// ▶ Запуск
-askColorChoice();
+// 🔁 Рекурсивный обход
+function walkDir(dir, replacements) {
+  fs.readdirSync(dir).forEach(file => {
+    const fullPath = path.join(dir, file);
+    const stat = fs.statSync(fullPath);
+
+    if (stat.isDirectory()) {
+      if (!['node_modules', '.git', '.next'].includes(file)) {
+        walkDir(fullPath, replacements);
+      }
+    } else if (extensions.includes(path.extname(file))) {
+      replaceInFile(fullPath, replacements);
+    }
+  });
+}

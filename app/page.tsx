@@ -16,8 +16,8 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-[#4f9eff]/10 to-transparent" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#4f9eff]/5 rounded-full blur-3xl" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#ffffff]/10 to-transparent" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#ffffff]/5 rounded-full blur-3xl" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
@@ -34,8 +34,8 @@ export default function Home() {
               className="flex justify-center mb-8"
             >
               <div className="relative">
-                <div className="absolute inset-0 bg-[#4f9eff]/20 rounded-full blur-xl"></div>
-                <Brain className="relative w-16 h-16 text-[#4f9eff]" />
+                <div className="absolute inset-0 bg-[#ffffff]/20 rounded-full blur-xl"></div>
+                <Brain className="relative w-16 h-16 text-[#ffffff]" />
               </div>
             </motion.div>
 
@@ -45,7 +45,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-5xl sm:text-6xl lg:text-7xl font-space-grotesk font-bold mb-6"
             >
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-[#4f9eff]">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-[#ffffff]">
                 Your AI Assistant for Sales, Support, and CRM Automation
               </span>
             </motion.h1>
@@ -67,7 +67,7 @@ export default function Home() {
             >
               <Button
                 size="lg"
-                className="bg-[#4f9eff] hover:bg-[#4f9eff]/80 text-lg px-8 h-14 shadow-[0_0_20px_rgba(79,158,255,0.3)] hover:shadow-[0_0_30px_rgba(79,158,255,0.5)] transition-all duration-300"
+                className="bg-[#ffffff] hover:bg-[#ffffff]/80 text-lg px-8 h-14 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-all duration-300"
               >
                 Try Free Demo
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -76,7 +76,7 @@ export default function Home() {
                 size="lg"
                 variant="outline"
                 onClick={scrollToFeatures}
-                className="border-[#2b2f38] hover:border-[#4f9eff] text-lg px-8 h-14 transition-all duration-300"
+                className="border-[#2b2f38] hover:border-[#ffffff] text-lg px-8 h-14 transition-all duration-300"
               >
                 See How It Works
               </Button>
@@ -106,22 +106,22 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                icon: <Bot className="h-8 w-8 text-[#4f9eff]" />,
+                icon: <Bot className="h-8 w-8 text-[#ffffff]" />,
                 title: "AI-Powered Support",
                 description: "24/7 intelligent customer support that learns and improves over time."
               },
               {
-                icon: <Zap className="h-8 w-8 text-[#4f9eff]" />,
+                icon: <Zap className="h-8 w-8 text-[#ffffff]" />,
                 title: "Process Automation",
                 description: "Streamline repetitive tasks and workflows with smart automation."
               },
               {
-                icon: <ChartBar className="h-8 w-8 text-[#4f9eff]" />,
+                icon: <ChartBar className="h-8 w-8 text-[#ffffff]" />,
                 title: "Analytics & Insights",
                 description: "Data-driven insights to make informed business decisions."
               },
               {
-                icon: <Users className="h-8 w-8 text-[#4f9eff]" />,
+                icon: <Users className="h-8 w-8 text-[#ffffff]" />,
                 title: "Team Collaboration",
                 description: "Enhanced team productivity with integrated collaboration tools."
               }
@@ -132,7 +132,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
-                className="bg-[#2b2f38]/50 backdrop-blur-lg rounded-xl p-6 border border-[#2b2f38] hover:border-[#4f9eff]/50 transition-all duration-300"
+                className="bg-[#2b2f38]/50 backdrop-blur-lg rounded-xl p-6 border border-[#2b2f38] hover:border-[#ffffff]/50 transition-all duration-300"
               >
                 <div className="mb-4">{feature.icon}</div>
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
@@ -164,17 +164,17 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                icon: <Rocket className="h-12 w-12 text-[#4f9eff]" />,
+                icon: <Rocket className="h-12 w-12 text-[#ffffff]" />,
                 title: "Quick Setup",
                 description: "Connect SmartAssist to your existing tools and systems in minutes."
               },
               {
-                icon: <Shield className="h-12 w-12 text-[#4f9eff]" />,
+                icon: <Shield className="h-12 w-12 text-[#ffffff]" />,
                 title: "Secure Integration",
                 description: "Your data is encrypted and protected with enterprise-grade security."
               },
               {
-                icon: <Target className="h-12 w-12 text-[#4f9eff]" />,
+                icon: <Target className="h-12 w-12 text-[#ffffff]" />,
                 title: "Start Automating",
                 description: "Watch as SmartAssist streamlines your business processes automatically."
               }
@@ -191,7 +191,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
                 <p className="text-gray-400">{step.description}</p>
                 {index < 2 && (
-                  <ArrowRight className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-[#4f9eff] h-8 w-8" />
+                  <ArrowRight className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-[#ffffff] h-8 w-8" />
                 )}
               </motion.div>
             ))}
@@ -220,19 +220,19 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                icon: <MessageSquare className="h-8 w-8 text-[#4f9eff]" />,
+                icon: <MessageSquare className="h-8 w-8 text-[#ffffff]" />,
                 metric: "1s",
                 title: "Response Time",
                 description: "Lightning-fast automated responses to customer inquiries"
               },
               {
-                icon: <BarChart3 className="h-8 w-8 text-[#4f9eff]" />,
+                icon: <BarChart3 className="h-8 w-8 text-[#ffffff]" />,
                 metric: "80%",
                 title: "Automation Rate",
                 description: "Of routine tasks automated, saving valuable time"
               },
               {
-                icon: <Clock className="h-8 w-8 text-[#4f9eff]" />,
+                icon: <Clock className="h-8 w-8 text-[#ffffff]" />,
                 metric: "24/7",
                 title: "Availability",
                 description: "Round-the-clock customer support and automation"
@@ -247,7 +247,7 @@ export default function Home() {
                 className="text-center p-8 bg-[#2b2f38]/30 rounded-xl border border-[#2b2f38]"
               >
                 <div className="flex justify-center mb-4">{benefit.icon}</div>
-                <div className="text-4xl font-bold text-[#4f9eff] mb-2">{benefit.metric}</div>
+                <div className="text-4xl font-bold text-[#ffffff] mb-2">{benefit.metric}</div>
                 <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
                 <p className="text-gray-400">{benefit.description}</p>
               </motion.div>
@@ -304,13 +304,13 @@ export default function Home() {
                 className="bg-[#2b2f38]/30 p-6 rounded-xl border border-[#2b2f38]"
               >
                 <div className="mb-4">
-                  <CheckCircle2 className="h-8 w-8 text-[#4f9eff]" />
+                  <CheckCircle2 className="h-8 w-8 text-[#ffffff]" />
                 </div>
                 <p className="text-gray-300 mb-6 italic">"{testimonial.quote}"</p>
                 <div>
                   <p className="font-semibold">{testimonial.author}</p>
                   <p className="text-sm text-gray-400">{testimonial.role}</p>
-                  <p className="text-sm text-[#4f9eff]">{testimonial.company}</p>
+                  <p className="text-sm text-[#ffffff]">{testimonial.company}</p>
                 </div>
               </motion.div>
             ))}
@@ -335,7 +335,7 @@ export default function Home() {
               Join thousands of businesses already using SmartAssist to automate their operations and delight their customers.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" className="bg-[#4f9eff] hover:bg-[#4f9eff]/80">
+              <Button size="lg" className="bg-[#ffffff] hover:bg-[#ffffff]/80">
                 Get Started Now
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>

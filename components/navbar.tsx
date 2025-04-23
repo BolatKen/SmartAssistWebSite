@@ -33,7 +33,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center space-x-2">
-            <Brain className="w-8 h-8 text-[#4f9eff]" />
+            <Brain className="w-8 h-8 text-[#ffffff]" />
             <span className="font-space-grotesk text-xl font-bold">SmartAssist</span>
           </Link>
 
@@ -43,12 +43,12 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-[#f0f0f0] hover:text-[#4f9eff] transition-colors"
+                className="text-[#f0f0f0] hover:text-[#ffffff] transition-colors"
               >
                 {item.label}
               </Link>
             ))}
-            <Button className="bg-[#4f9eff] hover:bg-[#4f9eff]/80">
+            <Button className="bg-[#ffffff] hover:bg-[#ffffff]/80">
               Get Started
             </Button>
           </div>
@@ -77,13 +77,13 @@ export function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="block px-3 py-2 text-[#f0f0f0] hover:text-[#4f9eff] transition-colors"
+                  className="block px-3 py-2 text-[#f0f0f0] hover:text-[#ffffff] transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.label}
                 </Link>
               ))}
-              <Button className="w-full bg-[#4f9eff] hover:bg-[#4f9eff]/80 mt-4">
+              <Button className="w-full bg-[#ffffff] hover:bg-[#ffffff]/80 mt-4">
                 Get Started
               </Button>
             </div>

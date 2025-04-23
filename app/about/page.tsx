@@ -23,22 +23,22 @@ const teamMembers = [
 
 const values = [
   {
-    icon: <Brain className="h-8 w-8 text-[#4f9eff]" />,
+    icon: <Brain className="h-8 w-8 text-[#ffffff]" />,
     title: "Innovation First",
     description: "Pushing the boundaries of AI technology to solve real business challenges."
   },
   {
-    icon: <Shield className="h-8 w-8 text-[#4f9eff]" />,
+    icon: <Shield className="h-8 w-8 text-[#ffffff]" />,
     title: "Security & Trust",
     description: "Enterprise-grade security and privacy protection for your business data."
   },
   {
-    icon: <Zap className="h-8 w-8 text-[#4f9eff]" />,
+    icon: <Zap className="h-8 w-8 text-[#ffffff]" />,
     title: "Lightning Fast",
     description: "Instant responses and automation that keeps your business moving."
   },
   {
-    icon: <Users className="h-8 w-8 text-[#4f9eff]" />,
+    icon: <Users className="h-8 w-8 text-[#ffffff]" />,
     title: "Customer Success",
     description: "Dedicated support ensuring you get the most from our platform."
   }
@@ -104,7 +104,7 @@ export default function About() {
                 className="text-center"
               >
                 <div className="relative w-48 h-48 mx-auto mb-4">
-                  <div className="absolute inset-0 bg-[#4f9eff]/20 rounded-full blur-xl"></div>
+                  <div className="absolute inset-0 bg-[#ffffff]/20 rounded-full blur-xl"></div>
                   <img
                     src={member.image}
                     alt={member.name}

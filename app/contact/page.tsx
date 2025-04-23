@@ -41,7 +41,7 @@ export default function Contact() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             {isSubmitted ? (
-              <div className="bg-[#2b2f38]/30 backdrop-blur-lg rounded-xl p-8 border border-[#4f9eff]">
+              <div className="bg-[#2b2f38]/30 backdrop-blur-lg rounded-xl p-8 border border-[#ffffff]">
                 <h3 className="text-2xl font-bold text-center mb-4">Thank You!</h3>
                 <p className="text-gray-400 text-center">
                   We've received your message and will get back to you shortly.
@@ -52,7 +52,7 @@ export default function Contact() {
                 <div>
                   <Input
                     placeholder="Your Name"
-                    className="bg-[#2b2f38]/30 border-[#2b2f38] focus:border-[#4f9eff] text-white placeholder:text-gray-500"
+                    className="bg-[#2b2f38]/30 border-[#2b2f38] focus:border-[#ffffff] text-white placeholder:text-gray-500"
                     required
                   />
                 </div>
@@ -60,7 +60,7 @@ export default function Contact() {
                   <Input
                     type="email"
                     placeholder="Email Address"
-                    className="bg-[#2b2f38]/30 border-[#2b2f38] focus:border-[#4f9eff] text-white placeholder:text-gray-500"
+                    className="bg-[#2b2f38]/30 border-[#2b2f38] focus:border-[#ffffff] text-white placeholder:text-gray-500"
                     required
                   />
                 </div>
@@ -68,20 +68,20 @@ export default function Contact() {
                   <Input
                     type="tel"
                     placeholder="Phone Number"
-                    className="bg-[#2b2f38]/30 border-[#2b2f38] focus:border-[#4f9eff] text-white placeholder:text-gray-500"
+                    className="bg-[#2b2f38]/30 border-[#2b2f38] focus:border-[#ffffff] text-white placeholder:text-gray-500"
                   />
                 </div>
                 <div>
                   <Textarea
                     placeholder="Your Message"
-                    className="bg-[#2b2f38]/30 border-[#2b2f38] focus:border-[#4f9eff] text-white placeholder:text-gray-500 min-h-[150px]"
+                    className="bg-[#2b2f38]/30 border-[#2b2f38] focus:border-[#ffffff] text-white placeholder:text-gray-500 min-h-[150px]"
                     required
                   />
                 </div>
                 <Button 
                   type="submit"
                   size="lg"
-                  className="w-full bg-[#4f9eff] hover:bg-[#4f9eff]/80"
+                  className="w-full bg-[#ffffff] hover:bg-[#ffffff]/80"
                 >
                   Send Message
                 </Button>
@@ -100,19 +100,19 @@ export default function Contact() {
               <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
-                  <Mail className="h-6 w-6 text-[#4f9eff]" />
+                  <Mail className="h-6 w-6 text-[#ffffff]" />
                   <div>
                     <p className="font-medium">Email</p>
-                    <a href="mailto:hello@smartassist.ai" className="text-gray-400 hover:text-[#4f9eff]">
+                    <a href="mailto:hello@smartassist.ai" className="text-gray-400 hover:text-[#ffffff]">
                       hello@smartassist.ai
                     </a>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
-                  <Phone className="h-6 w-6 text-[#4f9eff]" />
+                  <Phone className="h-6 w-6 text-[#ffffff]" />
                   <div>
                     <p className="font-medium">Phone</p>
-                    <a href="tel:+77777777777" className="text-gray-400 hover:text-[#4f9eff]">
+                    <a href="tel:+77777777777" className="text-gray-400 hover:text-[#ffffff]">
                       +7 (777) 777 77 77
                     </a>
                   </div>
@@ -127,7 +127,7 @@ export default function Contact() {
                   href="https://instagram.com/smartassist.ai"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-[#4f9eff] transition-colors"
+                  className="text-gray-400 hover:text-[#ffffff] transition-colors"
                 >
                   <Instagram className="h-8 w-8" />
                 </a>
@@ -135,7 +135,7 @@ export default function Contact() {
                   href="https://t.me/smartassist"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-[#4f9eff] transition-colors"
+                  className="text-gray-400 hover:text-[#ffffff] transition-colors"
                 >
                   <MessageCircle className="h-8 w-8" />
                 </a>
@@ -143,7 +143,7 @@ export default function Contact() {
                   href="https://linkedin.com/company/smartassist"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-[#4f9eff] transition-colors"
+                  className="text-gray-400 hover:text-[#ffffff] transition-colors"
                 >
                   <Linkedin className="h-8 w-8" />
                 </a>

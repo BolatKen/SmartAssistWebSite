@@ -81,12 +81,12 @@ export default function Pricing() {
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className={`relative bg-[#2b2f38]/30 backdrop-blur-lg rounded-xl p-8 border ${
                 plan.popular 
-                  ? 'border-[#4f9eff] shadow-[0_0_20px_rgba(79,158,255,0.15)]' 
+                  ? 'border-[#ffffff] shadow-[0_0_20px_rgba(79,158,255,0.15)]' 
                   : 'border-[#2b2f38]'
               }`}
             >
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#4f9eff] text-white px-4 py-1 rounded-full text-sm font-medium">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#ffffff] text-white px-4 py-1 rounded-full text-sm font-medium">
                   Most Popular
                 </div>
               )}
@@ -103,7 +103,7 @@ export default function Pricing() {
               <ul className="space-y-4 mb-8">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-start">
-                    <Check className="h-5 w-5 text-[#4f9eff] mr-2 mt-0.5 flex-shrink-0" />
+                    <Check className="h-5 w-5 text-[#ffffff] mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-300">{feature}</span>
                   </li>
                 ))}
@@ -112,7 +112,7 @@ export default function Pricing() {
                 size="lg" 
                 className={`w-full ${
                   plan.popular 
-                    ? 'bg-[#4f9eff] hover:bg-[#4f9eff]/80' 
+                    ? 'bg-[#ffffff] hover:bg-[#ffffff]/80' 
                     : 'bg-[#2b2f38] hover:bg-[#2b2f38]/80'
                 }`}
               >

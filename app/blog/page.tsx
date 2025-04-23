@@ -48,7 +48,7 @@ export default function Blog() {
           <div className="max-w-md mx-auto relative">
             <Input
               placeholder="Search articles..."
-              className="bg-[#2b2f38]/30 border-[#2b2f38] focus:border-[#4f9eff] text-white placeholder:text-gray-500 pl-10"
+              className="bg-[#2b2f38]/30 border-[#2b2f38] focus:border-[#ffffff] text-white placeholder:text-gray-500 pl-10"
             />
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
           </div>
@@ -61,7 +61,7 @@ export default function Blog() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="bg-[#2b2f38]/30 backdrop-blur-lg rounded-xl overflow-hidden border border-[#2b2f38] hover:border-[#4f9eff]/50 transition-all duration-300"
+              className="bg-[#2b2f38]/30 backdrop-blur-lg rounded-xl overflow-hidden border border-[#2b2f38] hover:border-[#ffffff]/50 transition-all duration-300"
             >
               <Link href="/blog/post-slug" className="block">
                 <div className="relative h-48">
@@ -76,13 +76,13 @@ export default function Blog() {
                     {post.tags.map(tag => (
                       <span
                         key={tag}
-                        className="text-xs font-medium bg-[#4f9eff]/10 text-[#4f9eff] px-2 py-1 rounded-full"
+                        className="text-xs font-medium bg-[#ffffff]/10 text-[#ffffff] px-2 py-1 rounded-full"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
-                  <h2 className="text-xl font-bold mb-2 hover:text-[#4f9eff] transition-colors">
+                  <h2 className="text-xl font-bold mb-2 hover:text-[#ffffff] transition-colors">
                     {post.title}
                   </h2>
                   <p className="text-gray-400 mb-4">
@@ -90,7 +90,7 @@ export default function Blog() {
                   </p>
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-400">{post.date}</span>
-                    <span className="text-[#4f9eff] font-medium">Read more →</span>
+                    <span className="text-[#ffffff] font-medium">Read more →</span>
                   </div>
                 </div>
               </Link>
