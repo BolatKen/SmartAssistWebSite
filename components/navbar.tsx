@@ -33,7 +33,7 @@ export function Navbar() {
   }, [isMobileMenuOpen]);
 
   const navItems = [
-    { href: "/pricing", label: "Pricing" },
+    // { href: "/pricing", label: "Pricing" },
     { href: "/about", label: "О нас" },
     { href: "/blog", label: "Блог" },
     { href: "/contact", label: "Контакты" },
@@ -74,7 +74,7 @@ export function Navbar() {
                 className="bg-white hover:bg-white/80 text-[#0d0f14]"
                 onClick={() => setShowModal(true)}
               >
-                Начать 
+                Начать
               </Button>
             </div>
 

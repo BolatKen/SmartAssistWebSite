@@ -14,14 +14,17 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-sm text-gray-400">
-            Интеллектуальный ИИ-ассистент для автоматизации бизнеса, созданный для малых и средних предприятий.
+              Интеллектуальный ИИ-ассистент для автоматизации бизнеса, созданный
+              для малых и средних предприятий.
             </p>
             <div className="space-y-2">
               <p className="text-sm text-gray-400">
-                <span className="font-semibold text-white">Телефон:</span> +7 (706) 612 27 08
+                <span className="font-semibold text-white">Телефон:</span> +7
+                (706) 612 27 08
               </p>
               <p className="text-sm text-gray-400">
-                <span className="font-semibold text-white">Email:</span> smartassistgpt@gmail.com
+                <span className="font-semibold text-white">Email:</span>{" "}
+                smartassistgpt@gmail.com
               </p>
             </div>
             <div className="flex space-x-4">
@@ -31,7 +34,10 @@ export function Footer() {
               >
                 <Instagram className="h-5 w-5" />
               </Link>
-              <Link href="https://t.me/smartassistai" className="text-gray-400 hover:text-[#ffffff] transition-colors">
+              <Link
+                href="https://t.me/smartassistai"
+                className="text-gray-400 hover:text-[#ffffff] transition-colors"
+              >
                 <MessageCircle className="h-5 w-5" />
               </Link>
               <Link
@@ -47,8 +53,8 @@ export function Footer() {
             <h3 className="font-semibold mb-4">Продукт</h3>
             <ul className="space-y-2">
               <li>
-                <Link 
-                  href="/features" 
+                <Link
+                  href="/features"
                   className="text-gray-400 hover:text-[#ffffff] transition-colors relative group"
                 >
                   <span className="relative">
@@ -58,7 +64,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
+                {/* <Link
                   href="/pricing"
                   className="text-gray-400 hover:text-[#ffffff] transition-colors relative group"
                 >
@@ -66,7 +72,7 @@ export function Footer() {
                     Pricing
                     <span className="absolute inset-x-0 bottom-0 h-px bg-[#ffffff]/50 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
                   </span>
-                </Link>
+                </Link> */}
               </li>
               <li>
                 <Link
