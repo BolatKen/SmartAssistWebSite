@@ -6,21 +6,17 @@ import { Brain, Shield, Zap, Users } from "lucide-react";
 const teamMembers = [
   {
     name: "Bolat Ken",
-    role: "CEO & Co-founder",
+    role: "Head of AI & Co-founder",
     image:
       "https://res.cloudinary.com/dul8vhkgz/image/upload/v1745417719/photo_2025-03-02_10-20-42_ivmviz.jpg",
-  },
-  {
-    name: "Michael Roberts",
-    role: "CTO",
-    image:
-      "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300",
+    insta: "https://www.instagram.com/bolatkenb/",
   },
   {
     name: "Dimash Makhmut",
-    role: "Head of AI & Co-founder",
+    role: "Founder",
     image:
       "https://res.cloudinary.com/dul8vhkgz/image/upload/v1745417718/photo_2025-03-04_11-27-02_cmneo1.jpg",
+    insta: "https://www.instagram.com/dimash090909/",
   },
 ];
 
@@ -112,7 +108,7 @@ export default function About() {
           <h2 className="text-3xl font-space-grotesk font-bold text-center mb-12">
             Наша Команда
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="flex justify-center flex-wrap gap-40">
             {teamMembers.map((member, index) => (
               <motion.div
                 key={member.name}
@@ -120,15 +116,18 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
-                className="text-center"
+                className="text-center max-w-xs"
               >
-                <div className="relative w-48 h-48 mx-auto mb-4">
-                  <div className="absolute inset-0 bg-[#ffffff]/20 rounded-full blur-xl"></div>
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="relative rounded-full w-full h-full object-cover"
-                  />
+                <div className="relative w-48 h-48 mx-auto mb-4 text-center max-w-xs hover:scale-105 transition-transform duration-300">
+                  <div className="absolute inset-0 bg-[#ffffff]/20 rounded-full blur-xl "></div>
+
+                  <a href={member.insta}>
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="relative rounded-full w-full h-full object-cover"
+                    />
+                  </a>
                 </div>
                 <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
                 <p className="text-gray-400">{member.role}</p>
